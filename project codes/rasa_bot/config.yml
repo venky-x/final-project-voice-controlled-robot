@@ -1,0 +1,16 @@
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+- name: ResponseSelector
+  epochs: 100
+  constrain_similarities: true
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+assistant_id: 20250509-144136-glass-screen

@@ -1,0 +1,144 @@
+version: '3.1'
+
+intents:
+  - affirm
+  - ask_date
+  - ask_time
+  - deny
+  - request_help
+  - goodbye
+  - greet
+  - thank_you
+  - how_are_you
+  - set_reminder
+  - inform_task
+  - inform_time
+  - ask_name
+  - ask_weather
+  - tell_joke
+  - play_news
+  - play_music
+  - stop_music
+  - stop_news
+  - inform_health_status
+
+
+entities:
+  - task
+  - time
+  - health_status
+
+slots:
+  task:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: task
+
+  time:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: time
+
+  health_status:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: health_status
+
+
+responses:
+
+  utter_name_response:
+    - text: "I am your friendly robot assistant."
+    - text: "I'm your helpful robot assistant."
+    - text: "You can call me your robot assistant buddy!"
+
+  utter_goodbye:
+    - text: "Goodbye! Take care!"
+    - text: "See you later!"
+    - text: "Farewell! Stay safe!"
+    - text: "Bye! Let me know if you need anything else."
+
+  utter_ask_set_reminder:
+    - text: "Would you like to set a reminder?"
+    - text: "Do you want me to help you set a reminder?"
+    - text: "Shall I create a reminder for you?"
+
+  utter_ask_task:
+    - text: "What would you like to set a reminder about?"
+    - text: "Tell me the task you'd like me to remind you of."
+    - text: "What should I remind you to do?"
+
+  utter_set_time:
+    - text: "At what time would you like to set the reminder?"
+    - text: "Please tell me the time for the reminder."
+    - text: "When should I remind you?"
+
+  utter_cancel:
+    - text: "Okay, I won't set the reminder."
+    - text: "No worries, the reminder has been cancelled."
+    - text: "Alright, I’ve discarded the reminder setup."
+
+  utter_emergency_response:
+    - text: "Help is on the way! An emergency message has been sent."
+    - text: "Emergency alert sent. Assistance is on its way!"
+    - text: "I’ve sent out the emergency message—help is coming."
+
+  utter_weather:
+    - text: "The current weather in Singapore is {condition} with a temperature of {temp} degree celcius."
+    - text: "Right now in Singapore, it’s {condition} and {temp} degree celcius."
+    - text: "It’s {condition} in Singapore with a temperature of {temp} degree celcius."
+
+  utter_weather_error:
+    - text: "Sorry, I couldn't fetch the weather right now. Please try again later."
+    - text: "Hmm, I’m having trouble getting the weather. Try again soon."
+    - text: "Apologies! Weather data isn't available right now."
+
+  utter_health_check_prompt:
+    - text: "Hello, how are you feeling today?"
+    - text: "Hi there! How’s your health today?"
+    - text: "How are you doing? Any health updates?"
+
+  utter_health_response:
+    - text: "{health_response}"
+
+  utter_thank_you:
+    - text: "No problem, glad I could help!"
+    - text: "You're welcome!"
+    - text: "Happy to help anytime!"
+    - text: "Anytime! Let me know if you need anything else."
+
+  utter_how_are_you:
+    - text: "I am fine, how can I help you?"
+    - text: "Doing great, thanks! What can I assist you with?"
+    - text: "All good here! How may I assist you today?"
+    - text: "I'm doing well! Ready to help you."
+    
+  utter_joke:
+    - text: "Why did the scarecrow win an award? Because he was outstanding in his field!"
+    - text: "Why don’t skeletons fight each other? They don’t have the guts."
+    - text: "I'm reading a book about anti-gravity. It's impossible to put down!"
+    - text: "Why don't scientists trust atoms? Because they make up everything!"   
+
+
+actions:
+  - action_time
+  - action_date
+  - action_send_emergency
+  - action_set_reminder
+  - action_get_weather
+  - action_play_music
+  - action_play_news
+  - action_stop_music
+  - action_stop_news
+  - action_goodbye
+  - action_health_response  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

@@ -1,0 +1,289 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - good afternoon
+    - hi friend
+    - greetings
+    - howdy
+    - nice to see you
+    - good day
+    
+- intent: how_are_you
+  examples: |
+    - how are you
+    - how are you doing
+    - are you fine
+    - are you good
+    - how's it going
+    - how have you been
+    - what's up
+    - how do you do
+    - everything good?
+    - how’s everything
+    - hope you're doing well
+    - are you doing okay
+    - are you doing good
+    - how is life
+    - how’s your day going
+    - you alright?
+
+    
+- intent: ask_name
+  examples: |
+    - what’s your name?
+    - what is your name?
+    - tell me your name
+    - who are you?
+    - what should I call you?
+    - what’s your identity?
+    - can you tell me your name?
+    - who am I talking to?
+    - what do people call you?
+    - what’s your nickname?
+
+- intent: goodbye
+  examples: |
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - take care
+    - catch you later
+    - farewell
+    - have a good one
+    - see ya
+    - talk to you soon
+    - until next time
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ye
+    - absolutely
+    - sure thing
+    - definitely
+    - agree
+    - yup
+    - alright
+    - sounds great
+    - no problem
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - cancel
+    - don't
+    - stop
+    - not really
+    - nope
+    - negative
+    - not interested
+    - I'd rather not
+    - no thanks
+    
+- intent: thank_you
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thanks a lot
+    - appreciate it
+    - thank you so much
+
+- intent: ask_time
+  examples: |
+    - what time is it?
+    - tell me the time
+    - what's the time now?
+    - time
+    - what is the current time?
+    - can you tell me the time?
+    - what hour is it?
+    - show me the time
+    - time please
+    - what’s the clock saying?
+
+- intent: ask_date
+  examples: |
+    - what's the date today?
+    - today's date?
+    - date
+    - what date is it now?
+    - tell me the date
+    - what’s today’s date?
+    - can you give me the date?
+    - current date please
+    - show me the date
+    - what is the date today?
+    - what day is it?
+    - what year is it?
+    - which month is it?
+    - tell me the month
+    - tell me the day
+    - tell me the year
+    - day
+    - month
+    - year
+
+- intent: set_reminder
+  examples: |
+    - Remind me to [take my medicine](task) at [5 PM](time)
+    - Set a reminder to [call John](task) at [8 AM](time)
+    - i want to set a reminder
+    - i want to [call my daughter](task) at [7pm](time)
+    - set reminder for something at time
+    - Can you remind me to [drink water](task) at [3 PM](time)?
+    - Please set a reminder to [check emails](task) at [9:00](time)
+    - remind me to [take a break](task) at [2pm](time)
+    - set a reminder for [meeting with team](task) at [10:30 AM](time)
+    - I need a reminder to [pay bills](task) at [6 PM](time)
+
+- intent: inform_task
+  examples: |
+    - [take medicine](task)
+    - [call my daughter](task)
+    - [to meet someone](task)
+    - [buy groceries](task)
+    - [call John](task)
+    - [drink water](task)
+    - [check emails](task)
+    - [sleep](task)
+    - [exercise](task)
+    - [feed the dog](task)
+    - [pick up kids](task)
+    - [water plants](task)
+    - [schedule call](task)
+    - [read book](task)
+    - [cook dinner](task)
+    - [to eat](task)
+    - [eat](task)
+    - [take a break](task)
+    
+    
+
+- intent: inform_time
+  examples: |
+    - [5 PM](time)
+    - [at 7pm](time)
+    - [7pm](time)
+    - [5:30pm](time)
+    - [3 in the afternoon](time)
+    - [3 pm](time)
+    - [9:00](time)
+    - at [9 am](time)
+    - [18:00](time)
+    - [09:00](time)
+    - [18:30](time)
+    - [09:10](time)
+    - [1 PM](time)
+    - [11:00 AM](time)
+    - [4:30 PM](time)
+    - [12 noon](time)
+    - [6 PM](time)
+    - [8:45 AM](time)
+
+- intent: request_help
+  examples: |
+    - help
+    - help me
+    - i need help
+    - emergency
+    - call someone now
+    - I’m in danger
+    - assist me
+    - need assistance
+    - urgent help
+    - save me
+    - I need support
+    - help immediately
+    - emergency assistance
+    
+- intent: ask_weather
+  examples: |
+    - what's the weather like
+    - tell me about the weather
+    - how's the weather today
+    - is it raining
+    - what's the temperature
+    - weather
+    - what's the weather now?
+    
+- intent: tell_joke
+  examples: |
+    - tell me a joke
+    - make me laugh
+    - joke
+    - say something funny
+    
+- intent: play_music
+  examples: |
+    - Play music
+    - I want to listen to some music
+    - Play slow music
+    - Can you play a song?
+    - play song
+
+- intent: play_news
+  examples: |
+    - Play the news
+    - I want to listen to the news
+    - What's the latest news?
+    - Give me the news
+    - play some news
+
+- intent: stop_music
+  examples: |
+    - stop the music
+    - turn off the music
+    - stop music
+    - stop playing music
+    - stop song
+    - stop playing song
+
+- intent: stop_news
+  examples: |
+    - stop the news
+    - turn off the news
+    - stop news
+    - stop playing news
+
+- intent: inform_health_status
+  examples: |
+    - [good](health_status)
+    - [tired](health_status)
+    - [unwell](health_status)
+    - [happy](health_status)
+    - [very happy](health_status)
+    - [sad](health_status)
+    - [very sad](health_status)
+    - [very tired](health_status)
+    - [i feel good](health_status)
+    - [i am tired](health_status)
+    - [i am unwell](health_status)
+    - [i feel happy](health_status)
+    - [i feel sad](health_status)
+    - [i’m not feeling well](health_status)
+    - i feel a bit [sick](health_status)
+
+

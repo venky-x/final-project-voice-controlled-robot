@@ -1,0 +1,110 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet and prompt health check
+  steps:
+    - intent: greet
+    - action: utter_health_check_prompt  
+
+- rule: Respond to health status
+  steps:
+    - intent: inform_health_status
+    - action: action_health_response
+  
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Respond to name question
+  steps:
+    - intent: ask_name
+    - action: utter_name_response
+
+- rule: Tell the time
+  steps:
+    - intent: ask_time
+    - action: action_time
+
+- rule: Tell the date
+  steps:
+    - intent: ask_date
+    - action: action_date
+    
+- rule: Ask if user wants to set reminder
+  steps:
+    - intent: set_reminder
+    - action: utter_ask_set_reminder
+
+- rule: Start reminder setup if affirmed
+  steps:
+    - action: utter_ask_set_reminder
+    - intent: affirm
+    - action: utter_ask_task
+
+- rule: Cancel reminder setup if denied
+  steps:
+    - action: utter_ask_set_reminder
+    - intent: deny
+    - action: utter_cancel
+
+- rule: Ask for time after task is provided
+  steps:
+    - action: utter_ask_task
+    - intent: inform_task
+    - action: utter_set_time
+
+- rule: Set reminder after time is provided
+  steps:
+    - action: utter_set_time
+    - intent: inform_time
+    - action: action_set_reminder
+  
+- rule: Handle emergency request
+  steps:
+    - intent: request_help
+    - action: action_send_emergency
+    - action: utter_emergency_response
+
+- rule: Respond to weather query
+  steps:
+    - intent: ask_weather
+    - action: action_get_weather
+  
+- rule: Tell a joke
+  steps:
+    - intent: tell_joke
+    - action: utter_joke
+
+- rule: Play music on request
+  steps:
+    - intent: play_music
+    - action: action_play_music
+
+- rule: Play news on request
+  steps:
+    - intent: play_news
+    - action: action_play_news
+    
+- rule: Stop music on request
+  steps:
+    - intent: stop_music
+    - action: action_stop_music
+
+- rule: Stop news on request
+  steps:
+    - intent: stop_news
+    - action: action_stop_news
+    
+- rule: Respond to thank you
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you
+    
+- rule: Respond to how are you
+  steps:
+    - intent: how_are_you
+    - action: utter_how_are_you
+
+
