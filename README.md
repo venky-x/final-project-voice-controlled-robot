@@ -25,7 +25,7 @@ Hardware:
 
 Software:
 
-1.Raspberry Pi OS (64-bit) - Debian Bullseye 11 - Python 3.9.2
+1.Raspberry Pi OS (32-bit) - Debian Bullseye 11 - Python 3.9.2
 
 2.Required libraries: opencv-python, mediapipe, face_recognition, vosk, rasa, RPi.GPIO, requests, pygame, sounddevice, pynput, espeak-ng
 
